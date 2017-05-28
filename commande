@@ -1,0 +1,35 @@
+cp * /opt/hadoop/etc/hadoop
+cp /root/notebooks/* /opt/hadoop/etc/hadoop
+
+find / -type d -name 'sqoop'
+find / -type l -name "mysql*"
+[root@hadoop:/usr/local/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib]# ln -s  /usr/local/jdbc/mysql-connector-java-5.1.42-bin.jar mysql-connector.jar
+source ~/Documents/project/bigdata/load_employees.dump_simple.txt
+sudo mysql -u root -pmaria --host 172.32.255.18 mysql
+
+spark-submit --class org.apache.spark.examples.SparkPi \
+    --master yarn \
+    --deploy-mode cluster \
+    --driver-memory 1g \
+    --executor-memory 1g \
+    --executor-cores 1 \
+    --conf spark.eventLog.enabled=true \
+    --queue default \
+    /usr/local/spark-2.1.1-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.1.1.jar \
+    10
+
+
+    spark-submit --class org.apache.spark.examples.SparkPi \
+        --master yarn \
+        --deploy-mode cluster \
+        --driver-memory 1g \
+        --executor-memory 1g \
+        --executor-cores 1 \
+        --conf spark.eventLog.enabled=true \
+        --conf spark.eventLog.dir=hdfs://Hadoop:9000/shared/spark-logs \
+        --queue default \
+        /usr/local/spark-2.1.1-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.1.1.jar \
+        10
+
+
+        start-history-server.sh --properties-file spark-history.properties

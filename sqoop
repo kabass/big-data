@@ -1,0 +1,2 @@
+sqoop import     --connect jdbc:mysql://mariadb:3306/mysql     --username root     --password maria     --table employees     --hbase-table emp --column-family emp_details
+

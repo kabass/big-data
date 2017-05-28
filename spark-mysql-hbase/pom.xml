@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sn.sivaltec</groupId>
+	<artifactId>spark-mysql-hbase</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Archetype - spark-mysql-hbase</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<scala.tools.version>2.11.8</scala.tools.version>
+		<scala.version>2.11.8</scala.version>
+		<scalactic.version>3.0.0</scalactic.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.11 -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.26</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.10 -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.10</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-yarn_2.10 -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-yarn_2.11</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>it.nerdammer.bigdata</groupId>
+			<artifactId>spark-hbase-connector_2.10</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.apache.hbase</groupId> <artifactId>hbase-spark</artifactId> 
+			<version>1.2.0-cdh5.11.0</version> </dependency> -->
+
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>my-repo1</id>
+			<name>your custom repo</name>
+			<url>https://repository.cloudera.com/content/repositories/releases</url>
+		</repository>
+
+
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+									</excludes>
+								</filter>
+							</filters>
+							<!-- Additional configuration. -->
+						</configuration>
+					</execution>
+
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
