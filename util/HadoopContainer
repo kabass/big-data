@@ -1,0 +1,395 @@
+[
+    {
+        "Id": "b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43",
+        "Created": "2017-05-24T20:59:02.601152637Z",
+        "Path": "/etc/start.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 19146,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2017-05-25T08:00:06.86308887Z",
+            "FinishedAt": "2017-05-25T07:59:42.592604543Z"
+        },
+        "Image": "sha256:1cec6e79a698c7f4e386b8d928d188f85511c878b5d3b86e24715e696398b83b",
+        "ResolvConfPath": "/var/lib/docker/containers/b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43/hostname",
+        "HostsPath": "/var/lib/docker/containers/b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43/hosts",
+        "LogPath": "/var/lib/docker/containers/b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43/b3cbcc6cc0b3f113fad712dcda3f5a1a8db0b0c5861eda22a1a836051a781f43-json.log",
+        "Name": "/Hadoop",
+        "RestartCount": 0,
+        "Driver": "aufs",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": [
+            "3df2791e62e7676dd5882d20b0ac9978c12bcea58363f153af39f0a3c29ba746",
+            "b1430d8d560aa14db85307159a9d9943244aa4a114d5eb404a4c383a82c0ca2d"
+        ],
+        "HostConfig": {
+            "Binds": [
+                "/home/bka/notebooks:/root/notebooks"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "znet",
+            "PortBindings": {
+                "4040/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "4040"
+                    }
+                ],
+                "50070/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "50070"
+                    }
+                ],
+                "60010/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "60010"
+                    }
+                ],
+                "60030/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "60030"
+                    }
+                ],
+                "8042/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8042"
+                    }
+                ],
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ],
+                "8088/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8088"
+                    }
+                ],
+                "8787/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8787"
+                    }
+                ],
+                "8888/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8888"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [
+                "mariadb:172.32.255.18",
+                "oraclexe:172.32.255.19",
+                "node-01:172.32.255.29",
+                "node-02:172.32.255.28",
+                "node-03:172.32.255.27"
+            ],
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Name": "aufs",
+            "Data": null
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/bka/notebooks",
+                "Destination": "/root/notebooks",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "hadoop",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "10020/tcp": {},
+                "19888/tcp": {},
+                "22/tcp": {},
+                "4040/tcp": {},
+                "50010/tcp": {},
+                "50020/tcp": {},
+                "50070/tcp": {},
+                "50075/tcp": {},
+                "50090/tcp": {},
+                "60010/tcp": {},
+                "60030/tcp": {},
+                "8020/tcp": {},
+                "8030/tcp": {},
+                "8031/tcp": {},
+                "8032/tcp": {},
+                "8033/tcp": {},
+                "8040/tcp": {},
+                "8042/tcp": {},
+                "8080/tcp": {},
+                "8088/tcp": {},
+                "8787/tcp": {},
+                "8888/tcp": {},
+                "9000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "NODES=3",
+                "PATH=/opt/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin:/opt/jdk/sbin:/opt/hadoop/bin:/opt/hadoop/sbin:/opt/spark/bin:/opt/spark/sbin:/opt/julia/bin:/opt/zookeeper/bin:/opt/hbase/bin:/opt/hive/bin:/opt/pig/bin:/opt/sqoop/bin:/opt/flume/bin:/opt/mahout/bin:/opt/scala/bin",
+                "JAVA_HOME=/opt/jdk",
+                "HADOOP_VERSION=2.8.0",
+                "HADOOP_HOME=/opt/hadoop",
+                "HADOOP_INSTALL=/opt/hadoop",
+                "HADOOP_COMMON_HOME=/opt/hadoop",
+                "HADOOP_MAPRED_HOME=/opt/hadoop",
+                "HADOOP_HDFS_HOME=/opt/hadoop",
+                "YARN_HOME=/opt/hadoop",
+                "ANACONDA_VERSION=4.3.1",
+                "SPARK_VERSION=2.1.1",
+                "SPARK_HOME=/opt/spark",
+                "NOTEBOOKS_PATH=/root/notebooks",
+                "PYSPARK_PYTHON=python3",
+                "PYSPARK_DRIVER_PYTHON=ipython",
+                "PYSPARK_DRIVER_PYTHON_OPTS=notebook --ip='*' --no-browser --notebook-dir=/root/notebooks",
+                "RESET=\\[$(tput sgr0)\\]",
+                "GREY=\\[$(tput setaf 0)\\]",
+                "RED=\\[$(tput setaf 1)\\]",
+                "GREEN=\\[$(tput setaf 2)\\]",
+                "YELLOW=\\[$(tput setaf 3)\\]",
+                "BLUE=\\[$(tput setaf 4)\\]",
+                "PURPLE=\\[$(tput setaf 5)\\]",
+                "CYAN=\\[$(tput setaf 6)\\]",
+                "WHITE=\\[$(tput setaf 7)\\]",
+                "RSTUDIO_VERSION=1.0.143",
+                "JULIA_V=0.5",
+                "JULIA_VERSION=0.5.1",
+                "JULIA_PATH=/usr/local/julia-0.5.1",
+                "JU_HOME=/opt/julia",
+                "ZOOKEEPER_VERSION=3.4.10",
+                "ZOOKEEPER_HOME=/opt/zookeeper",
+                "HBASE_VERSION=1.3.1",
+                "HBASE_HOME=/opt/hbase",
+                "HIVE_VERSION=2.1.1",
+                "HIVE_HOME=/opt/hive",
+                "CLASSPATH=:/opt/hadoop/lib/*:.:/opt/hive/lib/*:.:/opt/flume/lib/*",
+                "PIG_VERSION=0.16.0",
+                "PIG_HOME=/opt/pig",
+                "PIG_CLASSPATH=/opt/hadoop/conf",
+                "SQOOP_VERSION=1.4.6",
+                "SQOOP_HOME=/opt/sqoop",
+                "ACCUMULO_HOME=/opt/sqoop/accumulo",
+                "HCAT_HOME=/opt/sqoop/hcatalog",
+                "FLUME_VERSION=1.7.0",
+                "FLUME_HOME=/opt/flume",
+                "MAHOUT_VERSION=0.13.0",
+                "MAHOUT_HOME=/opt/mahout",
+                "HOSTNODE=node-0",
+                "RPASS=@p4sS_-_#sECURITy*Cre4t3+bigZone",
+                "SCALA_VERSION=2.12.2",
+                "SCALA_HOME=/opt/scala"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "izone/hadoop:cluster",
+            "Volumes": {
+                "/root/notebooks": {}
+            },
+            "WorkingDir": "/root",
+            "Entrypoint": [
+                "/etc/start.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "4858cd21b6dff683aa5e7ced62372428c8c6d5110863099cb52772eb12a50ece",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "10020/tcp": null,
+                "19888/tcp": null,
+                "22/tcp": null,
+                "4040/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "4040"
+                    }
+                ],
+                "50010/tcp": null,
+                "50020/tcp": null,
+                "50070/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "50070"
+                    }
+                ],
+                "50075/tcp": null,
+                "50090/tcp": null,
+                "60010/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "60010"
+                    }
+                ],
+                "60030/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "60030"
+                    }
+                ],
+                "8020/tcp": null,
+                "8030/tcp": null,
+                "8031/tcp": null,
+                "8032/tcp": null,
+                "8033/tcp": null,
+                "8040/tcp": null,
+                "8042/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8042"
+                    }
+                ],
+                "8080/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8080"
+                    }
+                ],
+                "8088/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8088"
+                    }
+                ],
+                "8787/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8787"
+                    }
+                ],
+                "8888/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8888"
+                    }
+                ],
+                "9000/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/4858cd21b6df",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "znet": {
+                    "IPAMConfig": {
+                        "IPv4Address": "172.32.255.30"
+                    },
+                    "Links": null,
+                    "Aliases": [
+                        "b3cbcc6cc0b3"
+                    ],
+                    "NetworkID": "a1c4273780e7a406507e8e225ecdac3b0a9812d57c64ed36a9613befa5156f1f",
+                    "EndpointID": "7d79f990875acadc466f739bf77cade32524a0c2301e9c1bbd5a0c98d1353b95",
+                    "Gateway": "172.32.255.17",
+                    "IPAddress": "172.32.255.30",
+                    "IPPrefixLen": 28,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:20:ff:1e"
+                }
+            }
+        }
+    }
+]
