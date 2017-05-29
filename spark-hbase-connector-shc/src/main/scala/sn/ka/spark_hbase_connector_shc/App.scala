@@ -1,12 +1,10 @@
 package sn.ka.spark_hbase_connector_shc
 
-import sn.ka.spark_hbase_connector_shc
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.execution.datasources.hbase.HBaseTableCatalog
-import org.apache.spark.sql.execution.datasources.hbase.HBaseTableCatalog;
-
+import org.apache.spark.sql.execution.datasources.hbase.HBaseTableCatalog
 import org.apache.spark.sql.{SQLContext, _}
 import org.apache.spark.sql.execution.datasources.hbase._
 import org.apache.spark.{SparkConf, SparkContext}
