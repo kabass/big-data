@@ -1,0 +1,5 @@
+CREATE TABLE page_view (evenTime STRING, userid STRING, page STRING) PARTITIONED BY (dt STRING, applicationtype STRING )  ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' stored as textfile;
+
+LOAD DATA INPATH '/tmp/p_v_data.csv' INTO TABLE page_view partition (dt='2017-06-07', applicationtype='bass');
+
+hdfs dfs -copyFromLocal ~/Téléchargements/p_v_data.csv /tmp
