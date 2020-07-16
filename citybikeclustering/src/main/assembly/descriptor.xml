@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+    <id>deploy-prd</id>
+
+    <formats>
+        <format>zip</format>
+        <format>dir</format>
+    </formats>
+
+    <fileSets>
+
+        <fileSet>
+            <directory>src/main/model</directory>
+            <outputDirectory>./model</outputDirectory>
+            <fileMode>750</fileMode>
+            <directoryMode>750</directoryMode>
+        </fileSet>
+
+        <fileSet>
+            <directory>src/main/sample</directory>
+            <outputDirectory>./sample</outputDirectory>
+            <fileMode>750</fileMode>
+            <directoryMode>750</directoryMode>
+        </fileSet>
+
+    </fileSets>
+
+
+
+
+    <files>
+        <file>
+            <source>${project.build.directory}/city-bike-clustering-with-dependencies.jar</source>
+            <outputDirectory>./jars/</outputDirectory>
+        </file>
+        <file>
+            <source>src/main/conf/application-prod.properties</source>
+            <outputDirectory>./conf/</outputDirectory>
+        </file>
+        <!--<file>
+          <source>src/main/groovy/groovy.deploy.groovy</source>
+          <outputDirectory>bin</outputDirectory>
+        </file>
+
+        <file>
+          <source>${project.build.directory}/classes/prd/deploy.properties</source>
+          <outputDirectory>/</outputDirectory>
+        </file>-->
+    </files>
+
+</assembly>

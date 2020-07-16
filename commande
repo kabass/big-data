@@ -7,6 +7,11 @@ find / -type l -name "mysql*"
 source ~/Documents/project/bigdata/load_employees.dump_simple.txt
 sudo mysql -u root -pmaria --host 172.32.255.18 mysql
 
+docker exec -it <mycontainer>
+docker exec -it sandbox-hdp
+sudo docker run -d -P --name node-1 -v ~/logiciel/docker/partage-data/node1:/home/root/partage-data rastasheep/ubuntu-sshd:16.04
+/root/start-sandbox-hdp.sh
+
 spark-submit --class org.apache.spark.examples.SparkPi \
     --master yarn \
     --deploy-mode cluster \
@@ -17,7 +22,12 @@ spark-submit --class org.apache.spark.examples.SparkPi \
     --queue default \
     /usr/local/spark-2.1.1-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.1.1.jar \
     10
-
+    set hive.execution.engine=tez;
+     set hive.exec.dynamic.partition.mode=nonstrict;
+     INSERT INTO TABLE temps_orc_partition_date
+    partition (datelocal)
+    SELECT statecode, countrycode, sitenum, paramcode, poc, latitude, longitude, datum, param, timelocal, dategmt, timegmt, degrees, uom, mdl, uncert, qual, method, methodname, state, county, dateoflastchange, datelocal
+    FROM temps_txt;
 
     spark-submit --class org.apache.spark.examples.SparkPi \
         --master yarn \
@@ -31,5 +41,15 @@ spark-submit --class org.apache.spark.examples.SparkPi \
         /usr/local/spark-2.1.1-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.1.1.jar \
         10
 
-
+select * from temps_orc_partition_date_2 where countrycode ='"073"'
         start-history-server.sh --properties-file spark-history.properties
+
+
+        unzip /home/partage-data/hourly_TEMP_2017.zip
+        tail -n +2 /home/partage-data/hourly_TEMP_2017.csv > hourly_TEMP_2017.csv.tmp && mv -f hourly_TEMP_2017.csv.tmp hourly_TEMP_2017.csv
+        gzip hourly_TEMP_2017.csv
+        hadoop fs -copyFromLocal hourly_TEMP_2017.csv.gz /tmp
+
+        spark-submit --class SimpleApp --files  /home/partage-data/hive-site.xml --master yarn  --driver-memory 1g --executor-memory 2g --executor-cores 1 --deploy-mode cluster /home/partage-data/sample_spark_2.11-0.2.jar
+
+        spark-submit --class SimpleApp --files  /home/partage-data/hive-site.xml --master yarn --num-executors 3  --driver-memory 1g --executor-memory 2g --executor-cores 3 --deploy-mode client /home/partage-data/sample_spark_2.11-0.2.jar
