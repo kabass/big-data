@@ -39,3 +39,7 @@ Connection spark à ADLS en passant par hadoop
  1) télécharger spark sans hadoop
  2) assigner la variable d'environnement SPARK_DIST_CLASSPATH à la valeur de "hadoop classpath"
 
+
+Test :
+hdfs dfs -ls abfss://container-1@bkaadls.dfs.core.windows.net/")
+spark.read.csv("abfss://container-1@bkaadls.dfs.core.windows.net/aws")
