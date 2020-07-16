@@ -1,3 +1,7 @@
+Coté azure
+ 1) Créer un service pricipal
+ 2) Assigner le role "Storage Blob Data Contributor" ou donner lui la permission directement dans le container.
+
 Connection hadoop à ADLS GEN2
  1) télécharger hadoop
  2) Suivre le https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/admin_adls2_config.html
@@ -34,3 +38,4 @@ Connection hadoop à ADLS GEN2
 Connection spark à ADLS en passant par hadoop
  1) télécharger spark sans hadoop
  2) assigner la variable d'environnement SPARK_DIST_CLASSPATH à la valeur de "hadoop classpath"
+
